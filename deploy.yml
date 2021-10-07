@@ -4,12 +4,6 @@
   become: yes
 
   tasks:
-
-    - name: Install device-mapper-persistent-data
-      apt:
-        name: device-mapper-persistent-data
-        state: latest
-
     - name: Install qemu-kvm
       apt:
         name: qemu-kvm
