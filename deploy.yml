@@ -4,10 +4,6 @@
   become: yes
 
   tasks:
-    - name: Install apt
-      apt:
-        name: yum-utils
-        state: latest
 
     - name: Install device-mapper-persistent-data
       apt:
