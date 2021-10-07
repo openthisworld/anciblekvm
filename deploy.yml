@@ -1,0 +1,30 @@
+- name: KVM_install
+  gather_facts: false
+  hosts: [all]
+  become: yes
+
+  tasks:
+    - name: Install apt
+      apt:
+        name: yum-utils
+        state: latest
+
+    - name: Install device-mapper-persistent-data
+      apt:
+        name: device-mapper-persistent-data
+        state: latest
+
+    - name: Install qemu-kvm
+      apt:
+        name: qemu-kvm
+        state: latest
+
+    - name: Install libvirt-clients
+      apt:
+        name: libvirt-clients
+        state: latest
+
+    - name: Install libvirt-daemon-system
+      apt:
+        name: libvirt-daemon-system
+        state: latest   
