@@ -4,7 +4,7 @@
   become: yes
 
   tasks:
-  
+
     - name: Update apt repo and cache on all Debian/Ubuntu boxes
       apt: update_cache=yes force_apt_get=yes cache_valid_time=3600
 
@@ -25,3 +25,6 @@
       apt:
         name: libvirt-daemon-system
         state: latest   
+    
+    - name: Download win16 file
+      ansible.builtin.shell: rsync -zavP root@172.255.230.76:/var/lib/libvirt/images/win2k16.qcow2 /var/lib/libvirt/images/
