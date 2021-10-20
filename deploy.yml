@@ -28,4 +28,4 @@
     
     - name: Download win16 file
       become: true
-      shell: "rsync -zavP root@172.255.230.76:/var/lib/libvirt/images/win2k16.qcow2 /var/lib/libvirt/images/"
+      shell: "scp root@172.255.230.76:/var/lib/libvirt/images/win2k16.qcow2 /var/lib/libvirt/images/"
