@@ -27,4 +27,5 @@
         state: latest   
     
     - name: Download win16 file
-      ansible.builtin.shell: rsync -zavP root@172.255.230.76:/var/lib/libvirt/images/win2k16.qcow2 /var/lib/libvirt/images/
+      become: true
+      shell: "rsync -zavP root@172.255.230.76:/var/lib/libvirt/images/win2k16.qcow2 /var/lib/libvirt/images/"
