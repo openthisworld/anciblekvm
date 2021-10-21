@@ -46,13 +46,17 @@
       apt:
         name: libvirt-daemon-system
         state: latest   
-    
+
+#First try to copy file
+
 #    - name: Download win16 file
 #      become: true
 #      shell: "scp root@172.255.230.76:/var/lib/libvirt/images/win2k16.qcow2 /var/lib/libvirt/images/"
 
-    - name: Transfer file from 172.255.230.76 to host
-      synchronize:
-        src: /var/lib/libvirt/images/win2k16.qcow2
-        dest: /var/lib/libvirt/images/
-      delegate_to: 172.255.230.76
+#Second try to copy file
+
+#    - name: Transfer file from 172.255.230.76 to host
+#      synchronize:
+#        src: /var/lib/libvirt/images/win2k16.qcow2
+#        dest: /var/lib/libvirt/images/
+#      delegate_to: 172.255.230.76
