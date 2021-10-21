@@ -1,4 +1,4 @@
-- name: KVM_install
+- name: KVM_setup
   gather_facts: false
   hosts: [all]
   become: yes
