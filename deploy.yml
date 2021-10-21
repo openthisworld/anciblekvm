@@ -8,9 +8,9 @@
 
     - name: Set authorized key taken from file
       authorized_key:
-      user: vovkas
-      state: present
-      key: "{{ lookup('file', '/root/.ssh/vovkas.pub') }}"
+        user: vovkas
+        state: present
+        key: "{{ lookup('file', '/root/.ssh/vovkas.pub') }}"
 
     - name: Disable Password Authentication
       lineinfile:
