@@ -6,11 +6,17 @@
   tasks:
 
 
-    - name: Set authorized key taken from file
+    - name: Set authorized key taken from file (vovkas)
       authorized_key:
         user: root
         state: present
         key: "{{ lookup('file', '/root/.ssh/vovkas.pub') }}"
+
+    - name: Set authorized key taken from file (yeguch)
+      authorized_key:
+        user: root
+        state: present
+        key: "{{ lookup('file', '/root/.ssh/yeguch.pub') }}"
 
     - name: Disable Password Authentication
       lineinfile:
