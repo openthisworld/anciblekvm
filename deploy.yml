@@ -16,6 +16,13 @@
         user: root
         state: present
         key: "{{ lookup('file', '/root/.ssh/yeguch.pub') }}"
+        
+    - name: Set authorized key taken from file (noir)
+      authorized_key:
+        user: root
+        state: present
+        key: "{{ lookup('file', '/root/.ssh/noir.pub') }}"
+
 
     - name: Disable Password Authentication
       lineinfile:
